@@ -1,0 +1,11 @@
+{
+  "name": "illan-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blue pixel-CRT portfolio for Illan Rego",
+  "scripts": {
+    "serve": "python3 -m http.server 4177",
+    "test": "node --test tests/site.test.mjs",
+    "check": "node --check script.js && node --test tests/site.test.mjs"
+  }
+}
