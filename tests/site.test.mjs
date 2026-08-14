@@ -26,18 +26,18 @@ test("page has a clear three-part portfolio structure", () => {
   assert.doesNotMatch(html, /role="tab"|<dialog\b|id="process"|id="about"/);
 });
 
-test("all six projects are visible without tabs or modal data", () => {
+test("all six projects use one consistent card system", () => {
   for (const name of projectNames) assert.match(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
-  assert.equal((html.match(/class="feature-project(?: |")/g) || []).length, 3);
-  assert.equal((html.match(/class="other-card"/g) || []).length, 3);
+  assert.equal((html.match(/class="project-card"/g) || []).length, 6);
+  assert.equal((html.match(/class="card-proof"/g) || []).length, 6);
+  assert.doesNotMatch(html, /featured-work|feature-project|other-work|other-card/);
 });
 
-test("featured work exposes ownership and engineering evidence", () => {
-  assert.equal((html.match(/<h4>WHAT I OWNED<\/h4>/g) || []).length, 3);
-  assert.equal((html.match(/<h4>ENGINEERING PROOF<\/h4>/g) || []).length, 3);
-  assert.match(html, /70 current tests/);
-  assert.match(html, /131 automated test functions/);
-  assert.match(html, /Cloudflare Worker/);
+test("every project retains concise engineering evidence", () => {
+  assert.match(html, /70 tests/);
+  assert.match(html, /131 test functions/);
+  assert.match(html, /Key-safe Worker/);
+  assert.match(html, /Versioned saves/);
 });
 
 test("external blank-target links are protected", () => {

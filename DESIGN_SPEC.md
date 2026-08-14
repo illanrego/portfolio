@@ -9,7 +9,7 @@ A proper developer portfolio with a distinctive blue pixel/CRT visual system. Th
 The page has only three main sections:
 
 1. **Introduction** — identity, role, value proposition, technical focus, availability, and concise proof.
-2. **Selected work** — three full case-study rows followed by three compact secondary projects.
+2. **Selected work** — six equally weighted project cards in one responsive grid.
 3. **Contact** — remote-work intent, email, GitHub, and relevant domain knowledge.
 
 There are no tabs, filters, catalogue modes, process explainer, separate about section, detail modal, or back-to-top overlay.
@@ -19,9 +19,8 @@ There are no tabs, filters, catalogue modes, process explainer, separate about s
 - Asymmetric two-column introduction rather than a centered boot screen.
 - Name and positioning on the left; a functional profile terminal on the right.
 - Floating inventory tiles belong to the profile component rather than orbiting the whole viewport.
-- Editorial project rows alternate image/content disposition.
-- Engineering ownership and proof remain visible without opening another interface.
-- Secondary work uses a compact three-card archive within the same section.
+- All six projects use the same compact card component and visual weight.
+- A concise proof panel remains visible on every card without opening another interface.
 - Contact acts as the dark closing surface and contains the footer.
 
 ## Visual system
@@ -35,27 +34,18 @@ There are no tabs, filters, catalogue modes, process explainer, separate about s
 - Square geometry; no glass, soft gradients, or rounded pills.
 - `Press Start 2P` for major headings, `Silkscreen` for machine labels, and `VT323` for readable body copy.
 
-## Featured work
+## Selected work
 
-Primary case studies:
+The single project grid contains:
 
 1. Will's Locadora
 2. Comedy Club Manager
 3. Willcuts
+4. Startpage
+5. Open Mic RPG
+6. Will's Mod
 
-Each one exposes:
-
-- What the product is.
-- What Illan owned.
-- Concrete engineering proof.
-- Stack/quality tags.
-- Live/source links where available.
-
-Secondary work:
-
-- Startpage
-- Open Mic RPG
-- Will's Mod
+Every card exposes the product's purpose, one concise engineering-proof block, and live/source links where available.
 
 ## Interaction
 
@@ -73,4 +63,4 @@ Secondary work:
 - Images have descriptive alt text.
 - External links use `rel="noreferrer"`.
 - Reduced-motion mode removes animation and scanline overlays.
-- Mobile collapses the introduction, project rows, evidence columns, archive, and contact into a readable single column.
+- The project grid moves from three columns to two and then one; the introduction and contact also collapse into readable single columns.
