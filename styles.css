@@ -269,9 +269,9 @@ button {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(480px, 0.9fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(420px, 0.9fr);
   align-items: center;
-  gap: clamp(3rem, 7vw, 7rem);
+  gap: clamp(2rem, 4vw, 4.5rem);
   min-height: 720px;
   padding-block: clamp(4.5rem, 9vw, 7.5rem);
 }
@@ -279,7 +279,8 @@ button {
 .intro-copy {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  min-width: 0;
+  max-width: 640px;
 }
 
 .intro-kicker {
@@ -294,21 +295,28 @@ button {
 .intro h1 {
   display: block;
   width: auto;
-  max-width: 760px;
+  max-width: 640px;
   margin: 1.6rem 0 0;
   color: var(--paper);
   font-family: "Press Start 2P", monospace;
-  font-size: clamp(2.9rem, 5.7vw, 6rem);
-  line-height: 1.08;
-  letter-spacing: -0.065em;
+  font-size: clamp(2.65rem, 4.2vw, 4.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
   text-shadow: 5px 5px 0 var(--ink);
 }
 
 .intro h1 em {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
   color: var(--cyan);
+  font-family: "VT323", "Courier New", monospace;
+  font-size: 1.22em;
   font-style: normal;
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: 0.01em;
   text-shadow: 5px 5px 0 var(--blue-dark);
 }
 
@@ -898,9 +906,16 @@ button {
 
   .intro h1 {
     margin-top: 1.35rem;
-    font-size: clamp(2.25rem, 10.8vw, 3.45rem);
-    line-height: 1.14;
+    font-size: clamp(2rem, 9.2vw, 2.85rem);
+    line-height: 1.2;
     text-shadow: 4px 4px 0 var(--ink);
+  }
+
+  .intro h1 em {
+    margin-top: 0.05em;
+    font-size: 1.42em;
+    line-height: 0.82;
+    text-shadow: 4px 4px 0 var(--blue-dark);
   }
 
   .intro-lead {
@@ -916,30 +931,65 @@ button {
   }
 
   .intro-workbench {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(112px, 0.72fr) minmax(0, 1fr);
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 12px;
+    align-items: start;
     width: 100%;
   }
 
   .portrait-card {
     grid-row: auto;
     justify-self: start;
-    width: min(320px, calc(100% - 11px));
-    box-shadow: 7px 7px 0 var(--blue), 11px 11px 0 var(--ink);
+    width: 100%;
+    padding: 6px;
+    border-width: 2px;
+    box-shadow: 5px 5px 0 var(--blue), 8px 8px 0 var(--ink);
+    transform: none;
+  }
+
+  .portrait-label {
+    min-height: 27px;
+    padding-inline: 0.35rem;
+    font-size: 0.44rem;
+  }
+
+  .portrait-label span:last-child {
+    width: 17px;
+    height: 17px;
+  }
+
+  .portrait-image {
+    margin-top: 6px;
+    border-width: 2px;
+  }
+
+  .portrait-card > p {
+    padding: 0.55rem 0.15rem 0.1rem;
+    font-size: 0.4rem;
+    line-height: 1.45;
   }
 
   .workbench-notes {
+    gap: 12px;
     width: 100%;
   }
 
   .workbench-note {
-    padding: 0.85rem;
-    box-shadow: 5px 5px 0 var(--ink);
+    padding: 0.7rem;
+    border-width: 2px;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+
+  .workbench-note span {
+    margin-bottom: 0.45rem;
+    font-size: 0.43rem;
+    line-height: 1.35;
   }
 
   .workbench-note strong {
-    font-size: 1.08rem;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
   }
 
   .note-care {
@@ -948,7 +998,8 @@ button {
   }
 
   .workbench-stamp {
-    grid-column: 1;
+    grid-column: 1 / -1;
+    margin-top: 4px;
     font-size: 0.48rem;
   }
 

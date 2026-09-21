@@ -55,6 +55,16 @@ test("accessible navigation and motion safeguards remain", () => {
   assert.match(css, /@media \(max-width: 1040px\)/);
 });
 
+test("hero content stays contained and reflows on phones", () => {
+  assert.match(css, /\.intro-copy\s*{[^}]*min-width:\s*0/s);
+  assert.match(css, /\.intro h1 em\s*{[^}]*display:\s*block/s);
+  assert.match(
+    css,
+    /@media \(max-width: 700px\)[\s\S]*?\.intro-workbench\s*{[^}]*grid-template-columns:\s*minmax\(112px, 0\.72fr\) minmax\(0, 1fr\)/,
+  );
+  assert.match(css, /\.workbench-stamp\s*{[^}]*grid-column:\s*1 \/ -1/s);
+});
+
 test("content and identity rules are preserved", () => {
   const beforeContact = html.split('<section class="contact"')[0];
   assert.doesNotMatch(beforeContact, /working stand-up comedian/i);
