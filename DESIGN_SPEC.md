@@ -17,15 +17,15 @@ There are no tabs, filters, catalogue modes, process explainer, separate about s
 ## Layout identity
 
 - Asymmetric two-column introduction rather than a centered game-start screen.
-- A conversational headline and positioning sit on the left; a layered portrait/workbench composition sits on the right.
-- Crooked note cards and a small maker stamp give the opening a personal, tactile identity without inventory icons or game-menu choreography.
+- A conversational headline and positioning sit on the left; a structured portrait/workbench composition sits on the right.
+- Separate tech-info modules and a small maker stamp give the opening an old-school workstation identity without overlaps, inventory icons, or game-menu choreography.
 - All six projects use the same compact card component and visual weight.
 - A concise proof panel remains visible on every card without opening another interface.
 - Contact acts as the dark closing surface and contains the footer.
 
 ## Visual system
 
-- Deep navy and near-black introduction/contact surfaces, with cyan and violet workbench accents.
+- Deep navy and near-black introduction/contact surfaces, with cyan, violet, and restrained vaporwave-pink accents.
 - Pale blue project surface with sparse pixel dots.
 - Electric blue controls and highlights.
 - Cyan terminal/status accents.
