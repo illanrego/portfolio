@@ -8,7 +8,7 @@ A proper developer portfolio with a distinctive blue pixel/CRT visual system. Th
 
 The page has only three main sections:
 
-1. **Introduction** — identity, role, value proposition, technical focus, availability, and concise proof.
+1. **Introduction** — direct personal positioning, portrait, technical focus, and concise product values.
 2. **Selected work** — six equally weighted project cards in one responsive grid.
 3. **Contact** — remote-work intent, email, GitHub, and relevant domain knowledge.
 
@@ -16,16 +16,16 @@ There are no tabs, filters, catalogue modes, process explainer, separate about s
 
 ## Layout identity
 
-- Asymmetric two-column introduction rather than a centered boot screen.
-- Name and positioning on the left; a functional profile terminal on the right.
-- Floating inventory tiles belong to the profile component rather than orbiting the whole viewport.
+- Asymmetric two-column introduction rather than a centered game-start screen.
+- A conversational headline and positioning sit on the left; a layered portrait/workbench composition sits on the right.
+- Crooked note cards and a small maker stamp give the opening a personal, tactile identity without inventory icons or game-menu choreography.
 - All six projects use the same compact card component and visual weight.
 - A concise proof panel remains visible on every card without opening another interface.
 - Contact acts as the dark closing surface and contains the footer.
 
 ## Visual system
 
-- Deep navy and near-black introduction/contact surfaces.
+- Deep navy and near-black introduction/contact surfaces, with cyan and violet workbench accents.
 - Pale blue project surface with sparse pixel dots.
 - Electric blue controls and highlights.
 - Cyan terminal/status accents.
@@ -51,8 +51,6 @@ Every card exposes the product's purpose, one concise engineering-proof block, a
 
 - Smooth anchor navigation.
 - Pixel pressed states.
-- Subtle step-based floating tiles.
-- Optional WebAudio SFX, off by default and persisted locally.
 - No interaction is required to understand a project.
 
 ## Accessibility and responsive behavior

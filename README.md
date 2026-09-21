@@ -1,6 +1,6 @@
 # Illan Rego — Portfolio
 
-A blue pixel/CRT portfolio for Illan Rego, built as a static, accessible site.
+A personal pixel-vaporwave portfolio for Illan Rego, built as a static, accessible site.
 
 ## Local preview
 

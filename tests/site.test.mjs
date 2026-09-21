@@ -46,9 +46,8 @@ test("external blank-target links are protected", () => {
   for (const anchor of blankTargets) assert.match(anchor, /rel="noreferrer"/);
 });
 
-test("accessible controls and motion safeguards remain", () => {
+test("accessible navigation and motion safeguards remain", () => {
   assert.match(html, /class="skip-link"/);
-  assert.match(html, /aria-pressed="false"/);
   assert.match(html, /aria-label="Primary navigation"/);
   assert.match(css, /:focus-visible/);
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
@@ -61,8 +60,9 @@ test("content and identity rules are preserved", () => {
   assert.doesNotMatch(beforeContact, /working stand-up comedian/i);
   assert.doesNotMatch(html, /\bLua\b|\bPython\b/);
   assert.match(html, /Supabase authentication, RLS-protected cloud data/);
-  assert.match(html, /AVAILABLE FOR REMOTE WORK/);
-  assert.match(html, /VIEW SELECTED WORK/);
+  assert.match(html, /HELLO, I’M ILLAN/);
+  assert.match(html, /SEE WHAT I’VE BUILT/);
+  assert.match(html, /assets\/illan\.webp/);
 });
 
 test("every project image exists", async () => {
@@ -74,9 +74,8 @@ test("every project image exists", async () => {
   }
 });
 
-test("client script stays focused on optional SFX and the year", () => {
-  assert.match(script, /portfolio\.sfx/);
-  assert.match(script, /aria-pressed/);
+test("client script stays focused on the current year", () => {
   assert.match(script, /currentYear/);
+  assert.doesNotMatch(script, /AudioContext|localStorage|aria-pressed/);
   assert.doesNotMatch(script, /projectDetails|selectMode|showModal/);
 });
