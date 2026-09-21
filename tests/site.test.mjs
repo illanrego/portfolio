@@ -70,8 +70,8 @@ test("content and identity rules are preserved", () => {
   assert.doesNotMatch(beforeContact, /working stand-up comedian/i);
   assert.doesNotMatch(html, /\bLua\b|\bPython\b/);
   assert.match(html, /Supabase authentication, RLS-protected cloud data/);
-  assert.match(html, /HI, I’M ILLAN/);
-  assert.match(html, /But you can call me <em>Will\.<\/em>/);
+  assert.match(html, /HI, I’M ILLAN — BUT YOU CAN CALL ME WILL\./);
+  assert.match(html, /I build useful things with <em>personality\.<\/em>/);
   assert.match(html, /SEE WHAT I’VE BUILT/);
   assert.match(html, /assets\/illan\.webp/);
 });
